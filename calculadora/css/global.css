@@ -1,0 +1,134 @@
+:root {
+  --background: #D3DAE3;
+  --white: #F1F5F8;
+  --light-black: #888;
+
+  --black: #333;
+  --text-white: #F1F5F8;
+  
+  --green: #32D86B;
+  --green-dark: #1bb150;
+
+  --red: #F88F8F;
+  --red-dark: #D64C4C;
+  --red-darker: #9C2F2F;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Poppins', sans-serif;
+  color: var(--black);
+}
+
+body {
+  background-color: var(--background);
+}
+
+input,
+select {
+  font-size: 1rem;
+
+  padding: 0.5rem 1rem;
+  
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 20px -10px rgba(0, 0, 0, 0.75);
+}
+
+/* INPUT GROUP */
+.input-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.5rem;
+}
+
+.input-group label {
+  font-size: 1.25rem;
+}
+
+.input-group label {
+  position: relative;
+}
+
+.input-group label::before {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  left: -4px;
+
+  width: 3rem;
+  height: 2px;
+
+  background-color: var(--green);
+}
+
+.btn-green {
+  width: 100%;
+  text-decoration: none;
+
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-white);
+  text-transform: uppercase;
+  text-align: center;
+  
+  background-color: var(--green);
+  padding: 1rem 1.5rem;
+
+  border: none;
+  border-radius: 0.5rem;
+
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-green:hover {
+  background-color: var(--green-dark);
+}
+
+.btn-bottom-line-green {
+  text-decoration: none;
+  margin: 0 auto;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--green);
+  text-transform: uppercase;
+
+  position: relative;
+}
+
+.btn-bottom-line-green::before {
+  content: "";
+
+  position: absolute;
+  bottom: -0.25rem;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 0;
+  height: 2px;
+  background-color: var(--green);
+
+  transition: 0.3s;
+}
+
+.btn-bottom-line-green:hover::before {
+  width: 6ch;
+}
+
+/* .sr-only {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+} */

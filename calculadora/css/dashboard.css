@@ -1,0 +1,342 @@
+body {
+  padding: 1.5rem 0;
+}
+
+.container {
+  max-width: 1280px;
+  padding: 0 3rem;
+  margin: 0 auto;
+}
+
+section > div {
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 1rem;
+}
+
+header a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+section {
+  margin-bottom: 1.5rem;
+}
+
+.inputs {
+  display: flex;
+  gap: 2rem;
+}
+
+#prices-inputs .price-form {
+  display: flex;
+  gap: 1rem;
+}
+
+.item1 { grid-area: startdate; }
+.item2 { grid-area: enddate; }
+.item3 { grid-area: chale; }
+.item4 { grid-area: apto; }
+.item5 { grid-area: button; }
+
+#high-season form {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas: 
+    'startdate startdate startdate enddate enddate enddate'
+    'chale chale apto apto button button';
+}
+
+.season-form {
+  display: flex;
+  gap: 2rem;
+}
+
+#interval-section form {
+  display: flex;
+  gap: 1rem;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table, tr {
+  width: 100%;
+}
+
+th, td {
+  width: 20%;
+  text-align: left;
+  margin: 0;
+
+  padding: 1rem 1%;
+
+  border-bottom: 1px solid var(--light-black);
+}
+
+th:last-child, td:last-child {
+  width: 10%;
+}
+
+.table-options span {
+  font-size: 1.25rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.options-menu {
+  display: none;
+}
+
+.options-edit,
+.options-delete {
+  width: 45%;
+}
+
+.options-delete {
+  margin-left: 10%;
+}
+
+.btn-green {
+  font-size: 0.75rem;
+  padding: 0.75rem 2rem;
+  width: initial;
+  align-self: flex-end;
+}
+
+.modal {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  width: 100vw;
+}
+
+.overlay {
+  position: absolute;
+  
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.close-modal-btn {
+  position: absolute;
+
+  top: 2rem;
+  right: 3rem;
+
+  cursor: pointer;
+}
+
+.close-modal-btn i {
+  color: var(--red-dark);
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.hide {
+  display: none!important;
+}
+
+.modal > .content {
+  position: relative;
+
+  background: var(--white);
+  border-radius: 0.5rem;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 600px;
+  max-width: 100vw;
+  padding: 2rem 3rem;
+}
+
+.modal > .content h2 {
+  margin-bottom: 0.5rem;
+}
+
+#modal-edit form {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas: 
+    'startdate enddate'
+    'chale apto'
+    'button button';
+}
+
+#modal-edit .cancel-btn {
+  display: none;
+}
+
+#modal-delete form {
+  margin-top: 1rem;
+}
+
+#modal-delete form button {
+  width: 100%;
+}
+
+@media (max-width: 650px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3, .input-group label {
+    font-size: 1rem;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .inputs, 
+  #interval-section form {
+    flex-direction: column;
+  }
+
+  #prices-inputs .price-form {
+    flex-direction: column;
+  }
+
+  #interval-section form #interval {
+    width: calc(100% - 5ch);    
+  }
+
+  #interval-section form #interval+span {
+    margin-left: 1ch;
+  }
+
+  .btn-green {
+    align-self: initial;
+  }
+
+  #high-season form {
+    grid-template-areas: 
+    'startdate'
+    'enddate'
+    'chale'
+    'apto'
+    'button';
+  }
+
+  table {
+    font-size: 0.75rem;
+  }
+
+  #modal-edit > .content {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 0;
+
+    justify-content: center;
+  }
+
+  #modal-edit form {
+    grid-template-areas: 
+      'startdate' 
+      'enddate'
+      'chale' 
+      'apto'
+      'button';
+  }
+
+  #modal-edit .close-modal-btn {
+    display: none;
+  }
+
+  #modal-edit .cancel-btn {
+    display: block;
+
+    color: var(--red-dark);
+    font-weight: 600;
+    font-size: 0.75rem;
+    
+    padding: 0.75rem 2rem;
+    
+    border: 2px solid var(--red-dark);
+    border-radius: 0.5rem;
+    background-color: transparent;
+  }
+
+  #modal-delete > .content {
+    max-width: 90%;
+    padding: 2rem;
+  }
+
+  #modal-delete .close-modal-btn {
+    top: 2rem;
+    right: 2rem;
+  }
+}
+
+@media (max-width: 490px) {
+  .options-edit,
+  .options-delete {
+    display: none;
+  }
+
+  .options-menu {
+    display: block;
+    position: relative;
+  }
+
+  .options-menu div {
+    position: absolute;
+    
+    top: 0;
+    left: -6rem;
+
+    transform: translateY(-25%);
+
+    display: flex;
+    flex-direction: column;
+
+    width: 6rem;
+    padding: 0.5rem 0;
+
+    background: var(--white);
+    border-radius: 0.5rem;
+
+    box-shadow: 0px 0px 20px -10px rgba(0, 0, 0, 0.25);
+  }
+
+  .options-menu p {
+    font-size: 0.75rem;
+  }
+
+  .options-menu p i {
+    margin-right: 0.25rem;
+  }
+
+  .options-menu p:first-child {
+    margin-bottom: 0.25rem;
+  }
+
+}
