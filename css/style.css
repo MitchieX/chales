@@ -26,7 +26,7 @@ h2, .h2 {
 }
 h3, .h3 {
 	font-size: 2.7rem;
-	text-transform: capitalize;
+	
 }
 h4, .h4 {
 	font-size: 2.2rem;
@@ -35,7 +35,7 @@ h5, .h5 {
 	font-size: 1.6rem;
 	font-weight: 400;
 	color: #444;
-	text-transform: capitalize;
+	
 }
 h6, .h6 {
 	font-size: 1rem;
@@ -43,6 +43,10 @@ h6, .h6 {
 	font-weight:400;
 	letter-spacing: 2px;
 }
+
+html{
+	scroll-behavior: smooth;;
+  }
 ::selection {
 	color: #fff;
 }
@@ -219,6 +223,11 @@ mark{
 .padding-top-bottom {
 	padding-top: 100px;
 	
+}
+
+.padding-extra {
+	padding-top: 100px;
+	padding-bottom: 50px;
 }
 .padding-top {
 	padding-top: 100px;
@@ -433,7 +442,7 @@ mark{
 	margin-right: 5px;
 	margin-left: 5px;
 	padding: 0 10px;
-	color: #fff;
+	color: #000;
 	line-height: 20px;
 	font-weight:400;
 	font-size: 12px;
@@ -505,19 +514,35 @@ mark{
 	color: #fff;
 }
 .social-top{
-	color: #fff;
+	color: #000;
 	font-size: 12px;
 	line-height: 20px;
+	font-weight: 400;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	margin: 0;
 	padding: 0 10px;
-	border-right: 1px solid rgba(255,255,255,.2);
+	border-right: 1px solid #000;
 	transition: all 250ms linear;
 }
+
+.social-top-2{
+	color: #000;
+	font-size: 12px;
+	line-height: 20px;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin: 0;
+	padding: 0 10px;
+	transition: all 250ms linear;
+}
+
 .social-top:hover{
 	text-decoration: none;
 }
+
+
 .call-top{
 	color: #fff;
 	font-size: 12px;
@@ -2034,6 +2059,7 @@ select.form {
 	display: inline-block;
 	float: right;
 	color: #999;
+	font-weight: 500;
 	text-transform: uppercase;
 	font-size: 13px;
 	letter-spacing: 2px;
@@ -2544,6 +2570,7 @@ figure.vimeo a img, figure.youtube a img {
 }
 .amenities img{
 	width: 36px;
+	color: white;
 	height: auto;
 	display: block;
 	text-align: center;
@@ -3047,6 +3074,8 @@ figure.vimeo a img, figure.youtube a img {
 	opacity:1;
 	top:110px;
 }
+
+
 
 /* #Post Page
 ================================================== */
