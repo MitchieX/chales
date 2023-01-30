@@ -515,7 +515,7 @@ mark{
 }
 .social-top{
 	color: #000;
-	font-size: 12px;
+	font-size: 18px;
 	line-height: 20px;
 	font-weight: 400;
 	text-transform: uppercase;
@@ -528,7 +528,7 @@ mark{
 
 .social-top-2{
 	color: #000;
-	font-size: 12px;
+	font-size: 18px;
 	line-height: 20px;
 	font-weight: 400;
 	text-transform: uppercase;
@@ -2851,6 +2851,7 @@ figure.vimeo a img, figure.youtube a img {
 	border-bottom: none;
 	margin: 0;
 	padding: 20px;
+	color: #000;
 }
 .card-body.last{
 	border-bottom: 1px solid rgba(0,0,0,.1);
