@@ -241,7 +241,7 @@
 		} )(jQuery);
 		  
 		  sync2.owlCarousel({
-			items : 5,
+			items : 10,
 			itemsDesktop      : [1199,4],
 			itemsDesktopSmall     : [979,3],
 			itemsTablet       : [768,3],
